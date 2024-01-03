@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Backup the original hosts file
+sudo cp /etc/hosts /etc/hosts.bak
+# Modify the hosts file to configure the desired DNS resolutions
+sudo sed -i 's/localhost$/localhost\n127.0.0.2/' /etc/hosts
+sudo sed -i 's/facebook.com$/facebook.com\n8.8.8.8/' /etc/hosts
+
+# Display success message
+echo "DNS configuration updated."
+
+# Note: If you want to revert the changes, uncomment the following lines and run the script.
+# echo "Reverting changes..."
+# sudo cp /etc/hosts.bak /etc/hosts
+# echo "DNS configuration reverted."
