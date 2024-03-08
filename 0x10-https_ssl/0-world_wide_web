@@ -1,29 +1,47 @@
 #!/usr/bin/env bash
-# A Bash script that will display information about the subdomains
+# This script displays information about subdomains of a domain
 
-# Check if at least one argument is provided
-if [ $# -lt 1 ]; then
-  echo "Usage: $0 domain [subdomain1 subdomain2 ...]"
-  exit 1
-fi
-
-# Set domain name
-domain="$1"
-
-# Set subdomains to query
-subdomains=("www" "lb-01" "web-01" "web-02")
-
-# If additional subdomains are provided as arguments, add them to the subdomains array
-if [ $# -gt 1 ]; then
-  subdomains+=("${@:2}")
-fi
-
-# Loop through subdomains and display information
-for subdomain in "${subdomains[@]}"; do
-  output=$(dig "$subdomain.$domain" +short)
-  if [ -n "$output" ]; then
-    echo "The subdomain $subdomain has IP address $output"
+get_subdomain_info() {
+  local domain="$1"
+  local subdomain="$2"
+  local record_type=""
+  local destination=""
+  
+  if [[ -z "$subdomain" ]]; then
+    subdomains=("www" "lb-01" "web-01" "web-02")
   else
-    echo "The subdomain $subdomain does not exist"
+    subdomains=("$subdomain")
   fi
-done
+  
+  for sub in "${subdomains[@]}"; do
+    record_type=$(dig +short "$sub.$domain" | awk 'NR==1{print $4}')
+    destination=$(dig +short "$sub.$domain" | awk 'NR==1{print $5}')
+    printf "The subdomain %s is a %s record and points to %s\n" "$sub" "$record_type" "$destination"
+  done
+}
+
+configure_domain() {
+  local domain="$1"
+  local lb_ip="lb-01-ip"
+  local web01_ip="web-01-ip"
+  local web02_ip="web-02-ip"
+  
+  # Configure subdomain www
+  echo "Configuring subdomain www..."
+  echo "www.$domain.   IN  A $lb_ip" >> /etc/bind/db.$domain
+  
+  # Configure subdomain lb-01
+  echo "Configuring subdomain lb-01..."
+  echo "lb-01.$domain. IN  A $lb_ip" >> /etc/bind/db.$domain
+  
+  # Configure subdomain web-01
+  echo "Configuring subdomain web-01..."
+  echo "web-01.$domain. IN  A $web01_ip" >> /etc/bind/db.$domain
+  
+  # Configure subdomain web-02
+  echo "Configuring subdomain web-02..."
+  echo "web-02.$domain. IN  A $web02_ip" >> /etc/bind/db.$domain
+}
+
+configure_domain "$1"
+get_subdomain_info "$1" "$2"
