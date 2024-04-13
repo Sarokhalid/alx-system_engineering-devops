@@ -1,0 +1,532 @@
+[34m
+* Datadog Agent 7 install script v1.29.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Get:1 http://repo.mysql.com trusty InRelease [34.0 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty Release
+Ign http://repo.mysql.com trusty InRelease
+Ign https://download.docker.com trusty InRelease
+Get:2 http://repo.mysql.com trusty/mysql-5.7-dmr amd64 Packages [3242 B]
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Ign https://download.docker.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Get:3 https://esm.ubuntu.com trusty-infra-security InRelease
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Get:4 https://esm.ubuntu.com trusty-infra-updates InRelease
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Ign https://download.docker.com trusty Release
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Get:5 https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Get:6 https://github.com  InRelease
+Get:7 https://github.com  InRelease
+Get:8 https://github.com  InRelease
+Get:9 https://github.com  InRelease
+Get:10 https://github.com  InRelease
+Get:11 https://github.com  InRelease
+Get:12 https://github.com  InRelease
+Get:13 https://github.com  InRelease
+Get:14 https://github.com  InRelease
+Get:15 https://github.com  InRelease
+Get:16 https://github.com  InRelease
+Get:17 https://github.com  InRelease
+Get:18 https://github.com  InRelease
+Get:19 https://github.com  InRelease
+Get:20 https://github.com  InRelease
+Get:21 https://github.com  InRelease
+Get:22 https://github.com  InRelease
+Get:23 https://github.com  InRelease
+Get:24 https://github.com  InRelease
+Get:25 https://github.com  InRelease
+Get:26 https://github.com  InRelease
+Get:27 https://github.com  InRelease
+Get:28 https://github.com  InRelease
+Get:29 https://github.com  InRelease
+Get:30 https://github.com  InRelease
+Get:31 https://github.com  InRelease
+Get:32 https://github.com  InRelease
+Get:33 https://github.com  InRelease
+Get:34 https://github.com  InRelease
+Get:35 https://github.com  InRelease
+Get:36 https://github.com  InRelease
+Get:37 https://github.com  InRelease
+Get:38 https://github.com  InRelease
+Get:39 https://github.com  InRelease
+Get:40 https://github.com  InRelease
+Get:41 https://github.com  InRelease
+Get:42 https://github.com  InRelease
+Get:43 https://github.com  InRelease
+Get:44 https://github.com  InRelease
+Get:45 https://github.com  InRelease
+Get:46 https://github.com  InRelease
+Get:47 https://github.com  InRelease
+Get:48 https://github.com  InRelease
+Get:49 https://github.com  InRelease
+Get:50 https://github.com  InRelease
+Get:51 https://github.com  InRelease
+Get:52 https://github.com  InRelease
+Get:53 https://github.com  InRelease
+Get:54 https://github.com  InRelease
+Get:55 https://github.com  InRelease
+Get:56 https://github.com  InRelease
+Get:57 https://github.com  InRelease
+Get:58 https://github.com  InRelease
+Get:59 https://github.com  InRelease
+Get:60 https://github.com  InRelease
+Get:61 https://github.com  InRelease
+Get:62 https://github.com  InRelease
+Get:63 https://github.com  InRelease
+Get:64 https://github.com  InRelease
+Get:65 https://github.com  InRelease
+Get:66 https://github.com  InRelease
+Get:67 https://github.com  InRelease
+Get:68 https://github.com  InRelease
+Get:69 https://github.com  InRelease
+Get:70 https://github.com  InRelease
+Get:71 https://github.com  InRelease
+Get:72 https://github.com  InRelease
+Get:73 https://github.com  InRelease
+Get:74 https://github.com  InRelease
+Get:75 https://github.com  InRelease
+Get:76 https://github.com  InRelease
+Get:77 https://github.com  InRelease
+Get:78 https://github.com  InRelease
+Get:79 https://github.com  InRelease
+Get:80 https://github.com  InRelease
+Get:81 https://github.com  InRelease
+Get:82 https://github.com  InRelease
+Get:83 https://github.com  InRelease
+Get:84 https://github.com  InRelease
+Get:85 https://github.com  InRelease
+Get:86 https://github.com  InRelease
+Get:87 https://github.com  InRelease
+Get:88 https://github.com  InRelease
+Get:89 https://github.com  InRelease
+Get:90 https://github.com  InRelease
+Get:91 https://github.com  InRelease
+Get:92 https://github.com  InRelease
+Get:93 https://github.com  InRelease
+Get:94 https://github.com  InRelease
+Get:95 https://github.com  InRelease
+Get:96 https://github.com  InRelease
+Get:97 https://github.com  InRelease
+Get:98 https://github.com  InRelease
+Get:99 https://github.com  InRelease
+Get:100 https://github.com  InRelease
+Get:101 https://github.com  InRelease
+Get:102 https://github.com  InRelease
+Get:103 https://github.com  InRelease
+Get:104 https://github.com  InRelease
+Get:105 https://github.com  InRelease
+Get:106 https://github.com  InRelease
+Get:107 https://github.com  InRelease
+Get:108 https://github.com  InRelease
+Get:109 https://github.com  InRelease
+Get:110 https://github.com  InRelease
+Get:111 https://github.com  InRelease
+Get:112 https://github.com  InRelease
+Get:113 https://github.com  InRelease
+Get:114 https://github.com  InRelease
+Get:115 https://github.com  InRelease
+Get:116 https://github.com  InRelease
+Get:117 https://github.com  InRelease
+Get:118 https://github.com  InRelease
+Get:119 https://github.com  InRelease
+Get:120 https://github.com  InRelease
+Get:121 https://github.com  InRelease
+Get:122 https://github.com  InRelease
+Get:123 https://github.com  InRelease
+Get:124 https://github.com  InRelease
+Get:125 https://github.com  InRelease
+Get:126 https://github.com  InRelease
+Get:127 https://github.com  InRelease
+Get:128 https://github.com  InRelease
+Get:129 https://github.com  InRelease
+Get:130 https://github.com  InRelease
+Get:131 https://github.com  InRelease
+Get:132 https://github.com  InRelease
+Get:133 https://github.com  InRelease
+Get:134 https://github.com  InRelease
+Get:135 https://github.com  InRelease
+Get:136 https://github.com  InRelease
+Get:137 https://github.com  InRelease
+Get:138 https://github.com  InRelease
+Get:139 https://github.com  InRelease
+Get:140 https://github.com  InRelease
+Get:141 https://github.com  InRelease
+Get:142 https://github.com  InRelease
+Get:143 https://github.com  InRelease
+Get:144 https://github.com  InRelease
+Get:145 https://github.com  InRelease
+Get:146 https://github.com  InRelease
+Get:147 https://github.com  InRelease
+Get:148 https://github.com  InRelease
+Get:149 https://github.com  InRelease
+Get:150 https://github.com  InRelease
+Get:151 https://github.com  InRelease
+Get:152 https://github.com  InRelease
+Get:153 https://github.com  InRelease
+Get:154 https://github.com  InRelease
+Get:155 https://github.com  InRelease
+Get:156 https://github.com  InRelease
+Get:157 https://github.com  InRelease
+Get:158 https://github.com  InRelease
+Get:159 https://github.com  InRelease
+Get:160 https://github.com  InRelease
+Get:161 https://github.com  InRelease
+Get:162 https://github.com  InRelease
+Get:163 https://github.com  InRelease
+Get:164 https://github.com  InRelease
+Get:165 https://github.com  InRelease
+Get:166 https://github.com  InRelease
+Get:167 https://github.com  InRelease
+Get:168 https://github.com  InRelease
+Get:169 https://github.com  InRelease
+Get:170 https://github.com  InRelease
+Get:171 https://github.com  InRelease
+Get:172 https://github.com  InRelease
+Get:173 https://github.com  InRelease
+Get:174 https://github.com  InRelease
+Get:175 https://github.com  InRelease
+Get:176 https://github.com  InRelease
+Get:177 https://github.com  InRelease
+Get:178 https://github.com  InRelease
+Get:179 https://github.com  InRelease
+Get:180 https://github.com  InRelease
+Get:181 https://github.com  InRelease
+Get:182 https://github.com  InRelease
+Get:183 https://github.com  InRelease
+Get:184 https://github.com  InRelease
+Get:185 https://github.com  InRelease
+Get:186 https://github.com  InRelease
+Get:187 https://github.com  InRelease
+Get:188 https://github.com  InRelease
+Get:189 https://github.com  InRelease
+Get:190 https://github.com  InRelease
+Get:191 https://github.com  InRelease
+Get:192 https://github.com  InRelease
+Ign https://github.com  InRelease
+Get:193 https://github.com  Release.gpg
+Ign https://github.com  Release.gpg
+Get:194 https://github.com  Release
+Get:195 https://github.com  Release
+Get:196 https://github.com  Release
+Get:197 https://github.com  Release
+Get:198 https://github.com  Release
+Get:199 https://github.com  Release
+Get:200 https://github.com  Release
+Get:201 https://github.com  Release
+Get:202 https://github.com  Release
+Get:203 https://github.com  Release
+Get:204 https://github.com  Release
+Get:205 https://github.com  Release
+Get:206 https://github.com  Release
+Get:207 https://github.com  Release
+Get:208 https://github.com  Release
+Get:209 https://github.com  Release
+Get:210 https://github.com  Release
+Get:211 https://github.com  Release
+Get:212 https://github.com  Release
+Get:213 https://github.com  Release
+Get:214 https://github.com  Release
+Get:215 https://github.com  Release
+Get:216 https://github.com  Release
+Get:217 https://github.com  Release
+Get:218 https://github.com  Release
+Get:219 https://github.com  Release
+Get:220 https://github.com  Release
+Get:221 https://github.com  Release
+Get:222 https://github.com  Release
+Get:223 https://github.com  Release
+Get:224 https://github.com  Release
+Get:225 https://github.com  Release
+Get:226 https://github.com  Release
+Get:227 https://github.com  Release
+Get:228 https://github.com  Release
+Get:229 https://github.com  Release
+Get:230 https://github.com  Release
+Get:231 https://github.com  Release
+Get:232 https://github.com  Release
+Get:233 https://github.com  Release
+Get:234 https://github.com  Release
+Get:235 https://github.com  Release
+Get:236 https://github.com  Release
+Get:237 https://github.com  Release
+Get:238 https://github.com  Release
+Get:239 https://github.com  Release
+Get:240 https://github.com  Release
+Get:241 https://github.com  Release
+Get:242 https://github.com  Release
+Get:243 https://github.com  Release
+Get:244 https://github.com  Release
+Get:245 https://github.com  Release
+Get:246 https://github.com  Release
+Get:247 https://github.com  Release
+Get:248 https://github.com  Release
+Get:249 https://github.com  Release
+Get:250 https://github.com  Release
+Get:251 https://github.com  Release
+Get:252 https://github.com  Release
+Get:253 https://github.com  Release
+Get:254 https://github.com  Release
+Get:255 https://github.com  Release
+Get:256 https://github.com  Release
+Get:257 https://github.com  Release
+Get:258 https://github.com  Release
+Get:259 https://github.com  Release
+Get:260 https://github.com  Release
+Get:261 https://github.com  Release
+Get:262 https://github.com  Release
+Get:263 https://github.com  Release
+Get:264 https://github.com  Release
+Get:265 https://github.com  Release
+Get:266 https://github.com  Release
+Get:267 https://github.com  Release
+Get:268 https://github.com  Release
+Get:269 https://github.com  Release
+Get:270 https://github.com  Release
+Get:271 https://github.com  Release
+Get:272 https://github.com  Release
+Get:273 https://github.com  Release
+Get:274 https://github.com  Release
+Get:275 https://github.com  Release
+Get:276 https://github.com  Release
+Get:277 https://github.com  Release
+Get:278 https://github.com  Release
+Get:279 https://github.com  Release
+Get:280 https://github.com  Release
+Get:281 https://github.com  Release
+Get:282 https://github.com  Release
+Get:283 https://github.com  Release
+Get:284 https://github.com  Release
+Get:285 https://github.com  Release
+Get:286 https://github.com  Release
+Get:287 https://github.com  Release
+Get:288 https://github.com  Release
+Get:289 https://github.com  Release
+Get:290 https://github.com  Release
+Get:291 https://github.com  Release
+Get:292 https://github.com  Release
+Get:293 https://github.com  Release
+Get:294 https://github.com  Release
+Get:295 https://github.com  Release
+Get:296 https://github.com  Release
+Get:297 https://github.com  Release
+Get:298 https://github.com  Release
+Get:299 https://github.com  Release
+Get:300 https://github.com  Release
+Get:301 https://github.com  Release
+Get:302 https://github.com  Release
+Get:303 https://github.com  Release
+Get:304 https://github.com  Release
+Get:305 https://github.com  Release
+Get:306 https://github.com  Release
+Get:307 https://github.com  Release
+Get:308 https://github.com  Release
+Get:309 https://github.com  Release
+Get:310 https://github.com  Release
+Get:311 https://github.com  Release
+Get:312 https://github.com  Release
+Get:313 https://github.com  Release
+Get:314 https://github.com  Release
+Get:315 https://github.com  Release
+Get:316 https://github.com  Release
+Get:317 https://github.com  Release
+Get:318 https://github.com  Release
+Get:319 https://github.com  Release
+Get:320 https://github.com  Release
+Get:321 https://github.com  Release
+Get:322 https://github.com  Release
+Get:323 https://github.com  Release
+Get:324 https://github.com  Release
+Get:325 https://github.com  Release
+Get:326 https://github.com  Release
+Get:327 https://github.com  Release
+Get:328 https://github.com  Release
+Get:329 https://github.com  Release
+Get:330 https://github.com  Release
+Get:331 https://github.com  Release
+Get:332 https://github.com  Release
+Get:333 https://github.com  Release
+Get:334 https://github.com  Release
+Get:335 https://github.com  Release
+Get:336 https://github.com  Release
+Get:337 https://github.com  Release
+Get:338 https://github.com  Release
+Get:339 https://github.com  Release
+Get:340 https://github.com  Release
+Get:341 https://github.com  Release
+Get:342 https://github.com  Release
+Get:343 https://github.com  Release
+Get:344 https://github.com  Release
+Get:345 https://github.com  Release
+Get:346 https://github.com  Release
+Get:347 https://github.com  Release
+Get:348 https://github.com  Release
+Get:349 https://github.com  Release
+Get:350 https://github.com  Release
+Get:351 https://github.com  Release
+Get:352 https://github.com  Release
+Get:353 https://github.com  Release
+Get:354 https://github.com  Release
+Get:355 https://github.com  Release
+Get:356 https://github.com  Release
+Get:357 https://github.com  Release
+Get:358 https://github.com  Release
+Get:359 https://github.com  Release
+Get:360 https://github.com  Release
+Get:361 https://github.com  Release
+Get:362 https://github.com  Release
+Get:363 https://github.com  Release
+Get:364 https://github.com  Release
+Get:365 https://github.com  Release
+Get:366 https://github.com  Release
+Get:367 https://github.com  Release
+Get:368 https://github.com  Release
+Get:369 https://github.com  Release
+Get:370 https://github.com  Release
+Get:371 https://github.com  Release
+Get:372 https://github.com  Release
+Get:373 https://github.com  Release
+Get:374 https://github.com  Release
+Get:375 https://github.com  Release
+Get:376 https://github.com  Release
+Get:377 https://github.com  Release
+Get:378 https://github.com  Release
+Get:379 https://github.com  Release
+Get:380 https://github.com  Release
+Ign https://github.com  Release
+Get:381 https://github.com  Packages
+Err https://github.com  Packages
+  
+Err https://github.com  Packages
+  
+Err https://github.com  Packages
+  
+Get:382 https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Err https://github.com  Packages
+  
+Err https://github.com  Packages
+  HttpError404
+Err https://download.docker.com trusty/stable amd64 Packages
+  
+Err https://download.docker.com trusty/stable amd64 Packages
+  
+Err https://download.docker.com trusty/stable amd64 Packages
+  
+Err https://download.docker.com trusty/stable amd64 Packages
+  
+Err https://download.docker.com trusty/stable amd64 Packages
+  gnutls_handshake() failed: A TLS packet with unexpected length was received.
+Fetched 892 kB in 20s (43.7 kB/s)
+W: GPG error: http://repo.mysql.com trusty InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY B7B3B788A8D3785C
+W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/trusty/stable/binary-amd64/Packages  gnutls_handshake() failed: A TLS packet with unexpected length was received.
+
+W: Failed to fetch https://github.com/pickhardt/betty/releases/download/v0.1.7/Packages  HttpError404
+
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+[31m'apt-get update' failed, the script will not install the latest version of apt-transport-https.[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version.
+curl is already the newest version.
+gnupg is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+gpg: directory `/root/.gnupg' created
+gpg: new configuration file `/root/.gnupg/gpg.conf' created
+gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run
+gpg: keyring `/root/.gnupg/secring.gpg' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+gpg: key C0962C7D: public key "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+gpg: key F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: key 382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+Get:1 https://apt.datadoghq.com stable InRelease
+Ign https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release
+Get:3 https://apt.datadoghq.com stable/7 amd64 Packages
+Fetched 82.4 kB in 1s (68.8 kB/s)
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 270 MB of archives.
+After this operation, 1250 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com/ stable/7 datadog-agent amd64 1:7.52.1-1 [270 MB]
+Get:2 https://apt.datadoghq.com/ stable/7 datadog-signing-keys all 1:1.3.1-1 [22.3 kB]
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+Fetched 270 MB in 1min 34s (2842 kB/s)
+Selecting previously unselected package datadog-agent.
+(Reading database ... 39155 files and directories currently installed.)
+Preparing to unpack .../datadog-agent_1%3a7.52.1-1_amd64.deb ...
+Unpacking datadog-agent (1:7.52.1-1) ...
+Selecting previously unselected package datadog-signing-keys.
+Preparing to unpack .../datadog-signing-keys_1%3a1.3.1-1_all.deb ...
+Unpacking datadog-signing-keys (1:1.3.1-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up datadog-agent (1:7.52.1-1) ...
+Creating dd-agent group
+Creating dd-agent user
+Enabling service datadog-agent
+No datadog.yaml file detected, not starting the agent
+Setting up datadog-signing-keys (1:1.3.1-1) ...
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/main amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_main_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/restricted amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_restricted_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/universe amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_universe_binary-amd64_Packages.gz)
+W: Duplicate sources.list entry http://archive.ubuntu.com/ubuntu/ trusty-backports/multiverse amd64 Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-backports_multiverse_binary-amd64_Packages.gz)
+W: You may want to run apt-get update to correct these problems
+[34m
+* Adding your API key to the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
+[0m
+[34m
+* Setting SITE in the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
+[0m
+[34m* Starting the Datadog Agent...
+[0m
+[32m  Your Datadog Agent is running and functioning properly.
+[0m[32m  It will continue to run in the background and submit metrics to Datadog.
+[0m[32m  If you ever want to stop the Datadog Agent, run:
+
+       stop datadog-agent
+
+  And to run it again run:
+
+       start datadog-agent[0m
+
